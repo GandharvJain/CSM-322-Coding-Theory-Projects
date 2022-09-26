@@ -5,7 +5,7 @@ def parseInput(d):
 	pairs = d.strip().strip('{}').split(',')
 	for i in pairs:
 		pair = i.split(':')
-		source[pair[0].strip().strip('\'')] = int(pair[1].strip().strip('\''))
+		source[pair[0].strip().strip('\'')] = float(pair[1].strip().strip('\''))
 	return source
 
 class node:

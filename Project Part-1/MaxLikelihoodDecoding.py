@@ -8,7 +8,8 @@ def parseInput(d):
 
 def HammingDistance(x, y):
 	ans = 0
-	ans += 1 for i in range(len(x)) if x[i] != y[i]
+	for i in range(len(x)):
+		if x[i] != y[i]: ans += 1
 	return ans
 
 recv_word, codewords = parseInput(input("Enter encoding (Ex - {000, 111}, 110): "))

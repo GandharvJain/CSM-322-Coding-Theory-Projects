@@ -6,7 +6,7 @@ def parseInput(d):
 	pairs = d.strip().strip('{}').split(',')
 	for i in pairs:
 		pair = i.split(':')
-		source[pair[0].strip().strip('\'')] = int(pair[1].strip().strip('\''))
+		source[pair[0].strip().strip('\'')] = float(pair[1].strip().strip('\''))
 	return source
 
 class node:
@@ -39,5 +39,5 @@ for k in source: source[k] /= f_total
 huffman_avg_word_len = sum(len(v) * source[k] for k, v in huffman_code.items())
 source_entropy = sum(-1 * p * log(p, 2) for p in source.values())
 
-print(f"Entropy of Huffman code: {huffman_avg_word_len}")
-print(f"Entropy of optimal structure: {source_entropy}")
+print(f"Entropy of Huffman code: {round(huffman_avg_word_len, 8)}")
+print(f"Entropy of optimal structure: {round(source_entropy, 8)}")
