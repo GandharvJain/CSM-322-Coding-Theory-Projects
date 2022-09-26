@@ -6,7 +6,7 @@ def parseInput(d):
 	for i in pairs: codewords.append(i.split(':')[1].strip().strip('\''))
 	return message, codewords
 
-message, codewords = parseInput(input("Enter received word and encoding (Ex - '01', {A: '1', B: '0'}): "))
+message, codewords = parseInput(input("Enter word and encoding (Ex - '01', {A: '1', B: '0'}): "))
 count = 0
 def checkCodewordPrefix(msg):
 	global count
